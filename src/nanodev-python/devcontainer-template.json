@@ -1,0 +1,38 @@
+{
+  "id": "nanodev-python",
+  "version": "2.0.0",
+  "name": "NanoDev Python Container",
+  "description": "Development container based on official Python 3.13 image with modern Python tooling. Includes uv package manager, Claude Code CLI, and essential dev tools. Designed for cross-platform development with proper path mapping for macOS/Linux hosts.",
+  "documentationURL": "https://github.com/NanoBoom/NanoDevContainer",
+  "licenseURL": "https://github.com/NanoBoom/NanoDevContainer/blob/main/LICENSE",
+  "platforms": [
+    "linux/amd64",
+    "linux/arm64"
+  ],
+  "keywords": [
+    "python",
+    "python3",
+    "uv",
+    "data-science",
+    "machine-learning",
+    "backend",
+    "devcontainer"
+  ],
+  "options": {
+    "userName": {
+      "type": "string",
+      "default": "dev",
+      "description": "Container username (custom user for development)"
+    },
+    "userUid": {
+      "type": "string",
+      "default": "1000",
+      "description": "User UID (run 'id -u' on host)"
+    },
+    "userGid": {
+      "type": "string",
+      "default": "1000",
+      "description": "User GID (run 'id -g' on host)"
+    }
+  }
+}

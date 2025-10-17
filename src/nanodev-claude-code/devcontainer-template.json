@@ -1,0 +1,39 @@
+{
+  "id": "nanodev-claude-code",
+  "version": "1.0.0",
+  "name": "NanoDev Claude Code Container",
+  "description": "Lightweight development container based on Ubuntu 22.04 optimized for Claude Code AI assistant. Includes Python (uv), Node.js (npx) for MCP servers, and essential dev tools. Focused on AI-powered development workflows with full compatibility.",
+  "documentationURL": "https://github.com/NanoBoom/NanoDevContainer",
+  "licenseURL": "https://github.com/NanoBoom/NanoDevContainer/blob/main/LICENSE",
+  "platforms": [
+    "linux/amd64",
+    "linux/arm64"
+  ],
+  "keywords": [
+    "ubuntu",
+    "claude-code",
+    "ai-assistant",
+    "mcp",
+    "python",
+    "nodejs",
+    "lightweight",
+    "devcontainer"
+  ],
+  "options": {
+    "userName": {
+      "type": "string",
+      "default": "node",
+      "description": "Container username (uses 'node' for consistency with other templates)"
+    },
+    "userUid": {
+      "type": "string",
+      "default": "1000",
+      "description": "User UID (run 'id -u' on host)"
+    },
+    "userGid": {
+      "type": "string",
+      "default": "1000",
+      "description": "User GID (run 'id -g' on host)"
+    }
+  }
+}
