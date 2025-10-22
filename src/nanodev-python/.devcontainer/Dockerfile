@@ -67,7 +67,9 @@ ENV PATH="/usr/local/bin:${PATH}"
 # ============================================================================
 # Claude Code CLI：通过 npm 全局安装
 # ============================================================================
-RUN npm install -g @anthropic-ai/claude-code \
+RUN npm install -g \
+    @anthropic-ai/claude-code \
+    @musistudio/claude-code-router \
     && npm cache clean --force \
     && rm -rf ~/.npm
 

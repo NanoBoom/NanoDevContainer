@@ -65,6 +65,7 @@ RUN npm install -g \
     eas-cli \
     vercel \
     @anthropic-ai/claude-code \
+    @musistudio/claude-code-router \
     # 清理 npm 缓存和文档
     && npm cache clean --force \
     && rm -rf ~/.npm

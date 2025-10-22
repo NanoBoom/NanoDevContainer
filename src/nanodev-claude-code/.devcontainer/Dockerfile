@@ -71,6 +71,7 @@ ENV PATH="/usr/local/bin:${PATH}"
 # ============================================================================
 RUN npm install -g \
     @anthropic-ai/claude-code \
+    @musistudio/claude-code-router \
     # 清理 npm 缓存和文档
     && npm cache clean --force \
     && rm -rf ~/.npm
