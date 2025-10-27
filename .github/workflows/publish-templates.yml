@@ -1,0 +1,42 @@
+name: Publish DevContainer Templates
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'src/**'
+      - '.github/workflows/publish-templates.yml'
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install DevContainer CLI
+        run: npm install -g @devcontainers/cli
+
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Publish DevContainer Templates
+        run: |
+          devcontainer templates publish \
+            --registry ghcr.io \
+            --namespace NanoBoom/nanodevcontainer \
+            src
