@@ -42,6 +42,7 @@ RUN apt-get update && apt-get install -y \
     # 命令行工具
     ripgrep \
     fd-find \
+    bat \
     tree \
     jq \
     unzip \
@@ -63,15 +64,6 @@ RUN curl -LsSf https://astral.sh/uv/install.sh | sh \
     && mv ~/.local/bin/uv* /usr/local/bin/ \
     && rm -rf ~/.local ~/.cargo ~/.rustup
 ENV PATH="/usr/local/bin:${PATH}"
-
-# ============================================================================
-# Claude Code CLI：通过 npm 全局安装
-# ============================================================================
-RUN npm install -g \
-    @anthropic-ai/claude-code \
-    @musistudio/claude-code-router \
-    && npm cache clean --force \
-    && rm -rf ~/.npm
 
 # ============================================================================
 # 环境变量配置

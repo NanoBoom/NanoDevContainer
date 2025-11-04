@@ -41,6 +41,7 @@ RUN \
 RUN apt-get update && apt-get install -y \
     # 命令行工具
     ripgrep \
+    bat \
     fd-find \
     tree \
     jq \
@@ -64,8 +65,6 @@ RUN npm install -g \
     expo-cli \
     eas-cli \
     vercel \
-    @anthropic-ai/claude-code \
-    @musistudio/claude-code-router \
     # 清理 npm 缓存和文档
     && npm cache clean --force \
     && rm -rf ~/.npm
