@@ -13,6 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
+      packages: read
       packages: write
 
     steps:
@@ -38,5 +39,5 @@ jobs:
         run: |
           devcontainer templates publish \
             --registry ghcr.io \
-            --namespace NanoBoom/nanodevcontainer \
+            --namespace nanoboom/nanodevcontainer \
             src
