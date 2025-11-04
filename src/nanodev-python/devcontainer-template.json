@@ -1,6 +1,6 @@
 {
   "id": "nanodev-python",
-  "version": "2.0.0",
+  "version": "1.0.0",
   "name": "NanoDev Python Container",
   "description": "Development container based on official Python 3.13 image with modern Python tooling. Includes uv package manager, Claude Code CLI, and essential dev tools. Designed for cross-platform development with proper path mapping for macOS/Linux hosts.",
   "documentationURL": "https://github.com/NanoBoom/NanoDevContainer",

@@ -1,6 +1,6 @@
 {
   "id": "nanodev-node",
-  "version": "3.0.0",
+  "version": "1.0.0",
   "name": "NanoDev Node.js Container",
   "description": "Development container based on official Node.js 24 image optimized for React Native/Expo and Next.js. Includes TypeScript, pnpm, yarn, Expo CLI, EAS CLI, Vercel CLI, Python (uv for MCP), and essential dev tools. Designed for cross-platform development with proper path mapping for macOS/Linux hosts.",
   "documentationURL": "https://github.com/NanoBoom/NanoDevContainer",
